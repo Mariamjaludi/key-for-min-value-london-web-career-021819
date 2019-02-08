@@ -3,15 +3,26 @@
 
 def key_for_min_value(name_hash)
   i = 0
-  j = 0
+  j = 1
   result = nil
   array = name_hash.collect do |key, value| value end
-
-  while i < array.length && array.length != 0
-    j = i + 1
-    while j< array.length
-      if array[i] < array[j]
-        result = array[i]
+  
+  while i < array.length 
+    result = array[i]
+     while j < array.length 
+       if result > array[j]
+         result = array[j]
+       end
+       j += 1
+     end
+    i += 1
+ end
+  result
+ end
+ 
+       
+         
+  
 
 
 
