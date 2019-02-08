@@ -17,7 +17,7 @@ def key_for_min_value(name_hash)
      end
     i += 1
  end
-  
+
   name_hash.select do |key, value|
     if value == result
       return key
