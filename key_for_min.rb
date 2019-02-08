@@ -4,7 +4,8 @@
 def key_for_min_value(name_hash)
   i = 0
   result = nil
-  array = name_hash.each do |key, value| value end
+  array = name_hash.collect do |key, value| value end
+
   while i < array.length
     if array[i] < array[i + 1]
       result = array[i]
